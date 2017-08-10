@@ -169,7 +169,7 @@ void OverridingLayer::planCallback(const geometry_msgs::Twist::ConstPtr& pose)
 				Vx_planner_lock.unlock();
 				
 				W_planner_lock.lock();
-					finaltwist.linear.x=W_Planner;
+					finaltwist.angular.z=W_Planner;
 				W_planner_lock.unlock();
 				
 				send_twist.publish(finaltwist);
